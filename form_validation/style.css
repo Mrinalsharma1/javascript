@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Mulish:wght@300&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+:root{
+	--myfont: 'Mulish', sans-serif;
+	--my-btn-font: 'Montserrat', sans-serif;
+	--lg-lightcolor: linear-gradient(to left,rgba(116,235,213,0.6),rgba(159,172,230,0));
+	--lg-color: linear-gradient(to left,#74ebd5,#9face6);
+
+	
+}
+body{
+	background-image: url(img1.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	font-family: var(--myfont);
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: 100%;
+	
+}
+.container{
+	background-color: #fff;
+	border-radius: 10px;
+	-webkit-border-radius:	10px;
+	/*padding: 20px;*/
+	overflow: hidden;
+	width: 33%;
+	box-shadow: 
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+}
+.header{
+	padding: 25px 0;
+	background: var(--lg-color);
+
+}
+.header h2{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 24px;
+	font-family: var(--my-btn-font);
+}
+.form{
+	padding: 25px;
+}
+.form-control{
+	margin-bottom: 20px;
+	position: relative;
+}
+.form-control label{
+	margin-bottom: 5px;
+	display: inline-block;
+}
+.form-control input{
+	width: 100%;
+	height: 25px;
+	padding: 15px 15px;
+	font-family: var(--myfont);
+	display: block;
+	border-radius: 5px;
+	border: 2px solid #f0f0f0;
+}
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+.form-control.success input{
+	border-color: #2ecc71;
+}
+.form-control.error input{
+	border-color: #e74c3c;
+}
+.form-control i{
+	position: absolute;
+	right: 8px;
+	top: 35px;
+	/*visibility: hidden;*/
+	display: none;
+}
+.form-control small{
+	display: none;
+}
+.form-control.success i.fa-check-circle{
+	color: #2ecc71;
+	display: block;
+}
+.form-control.error i.fa-exclamation-circle{
+	color: #e74c3c;
+	display: block;
+}
+.form-control.error small{
+	padding: 5px 0 0 0;
+	color: #e74c3c;
+	display: block;
+}
+button{
+	outline: none;
+	background: var(--lg-color);
+	border: none;
+	border-radius: 6px;
+	width: 100%;
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	padding: 15px 0;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+.form .my-btn:hover{
+	background: linear-gradient(to right, #74ebd5, #9face6);
+}
+  
+
+
