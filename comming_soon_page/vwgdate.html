@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date</title>
+	<script type="text/javascript">
+		/*function abc() {
+			var mydate=new date();
+			var d=mydate.getFullYear();
+			var h=mydate.getHours();
+			document.write("getFullYear: "+d);
+			document.write("getMonth: " +h);
+		}
+		var x = setInterval(function(){
+					var mydate = new Date("Jan 5, 2021 15:37:25").getTime();
+					var ltime=new Date().getTime();
+					var check=mydate - ltime;
+					var days = Math.floor(check / (1000 * 60 * 60 * 24));
+				  	var hours = Math.floor((check % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				  	var minutes = Math.floor((check % (1000 * 60 * 60)) / (1000 * 60));
+				  	var seconds = Math.floor((check % (1000 * 60)) / 1000);
+				  	document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+				  + minutes + "m " + seconds + "s ";
+
+				 
+				}*/
+
+
+
+
+var x = new Date("july 18, 2021 13:50:25").getTime();
+
+var countdownfunction = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = x - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 
+  document.getElementById("demo").innerHTML = days + "d : " + hours + "h : "
+  + minutes + "m : " + seconds + "s "; 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
+
+
+
+
+	/*var h = mydate.getHours();
+	var m = mydate.getMinutes();
+	var s = mydate.getSeconds();
+	var y=mydate.getFullYear();
+	var m=mydate.getMonth();
+		m=m+1;
+	var 
+
+	document.write("H:"+h+" M:"+m+" S:"+s+" Y:"+y+" M:"+m);
+	document.getElementById("dateHere").innerHTML = "H:"+h+" M:"+m+" S:"+s;
+}*/
+		
+	</script>
+	<style type="text/css">
+		body{
+			background-image: url('img1.jpg');
+			height: 100%;
+  			background-position: center;
+  			background-size: cover;
+		}
+
+		.abc{
+			text-align: center;
+			color: white;
+			font-size: 35px;
+			
+			position: absolute;
+ 			 top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+  			text-align: center;
+		}
+		#demo{
+			margin: 2px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h3>We Are Comming Soon</h3>
+	<p id="demo"></p>
+	<h4>designed by mrinal</h4>
+	</div>
+</body>
+</html>
